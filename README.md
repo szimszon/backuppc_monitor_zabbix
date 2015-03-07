@@ -1,6 +1,8 @@
 # Monitoring Backuppc with Zabbix
 
-Tested with Zabbix 2.4 and Backuppc v3.
+This is based on script found in thread https://www.zabbix.com/forum/showthread.php?t=17273
+
+Tested with Zabbix 2.4 (http://www.zabbix.com/) and Backuppc v3 (http://backuppc.sourceforge.net/).
 
 ## Install
 
