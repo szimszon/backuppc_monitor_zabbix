@@ -9,6 +9,7 @@ Tested with Zabbix 2.4 (http://www.zabbix.com/) and Backuppc v3 (http://backuppc
 1. Add a line from 'sudo' file to your sudo config
 2. copy 'zabbix-backuppc.pl' and 'zabbix-discover-backuppc.pl' to '/usr/local/bin'
 3. make it executable with backuppc user
+4. You need to have 'EnableRemoteCommands=1' in Zabbix agent config
 4. Import 'backuppc_zbx_export_templates.xml' into Zabbix and configure it
 
 ## The template contains
