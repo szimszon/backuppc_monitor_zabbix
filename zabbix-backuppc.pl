@@ -342,7 +342,7 @@ sub zabbix_post {
 	my $key = $_[0];
 	my $val = $_[1];
 	
-        my $cmd = "zabbix_sender -z $zabbix_server -p 10051 -s $zabbix_host -k $key -o '$val'";
+        my $cmd = "zabbix_sender -z $zabbix_server -p 10051 -s '$zabbix_host' -k $key -o '$val'";
         system("$cmd >/dev/null");
 }
 
