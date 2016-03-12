@@ -341,9 +341,12 @@ sub zabbix_config {
 sub zabbix_post {
 	my $key = $_[0];
 	my $val = $_[1];
-	
-        my $cmd = "zabbix_sender -z $zabbix_server -p 10051 -s '$zabbix_host' -k $key -o '$val'";
-        system("$cmd >/dev/null");
+        my @servers = split(',', $zabbix_server);
+
+        foreach my $server (@servers) {
+          my $cmd = "zabbix_sender -z $server -p 10051 -s $zabbix_host -k $key -o '$val'";
+          system("$cmd >/dev/null");
+        }
 }
 
 
